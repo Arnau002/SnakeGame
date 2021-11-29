@@ -24,5 +24,19 @@ namespace Snake2
         {
             InitializeComponent();
         }
+
+        private void cnvCanvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            Ellipse ellSerp = new Ellipse()
+            {
+                Fill = Brushes.Green,
+                Width = 100,
+                Height = 100
+
+            };
+            cnvCanvas.Children.Add(ellSerp);
+            Canvas.SetTop(ellSerp, cnvCanvas.ActualHeight / 2);
+            Canvas.SetLeft(ellSerp, cnvCanvas.ActualWidth / 2);
+        }
     }
 }
